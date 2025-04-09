@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,12 +19,20 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Space Grotesk', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				neonblue: '#00f2fe',
+				neonpurple: '#9b87f5',
+				neonpink: '#D946EF',
+				darkbg: '#0d0d16',
+				darkcard: '#141420',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -69,26 +78,44 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
+				"accordion-down": {
+					from: { height: "0" },
+					to: { height: "var(--radix-accordion-content-height)" },
+				},
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: "0" },
+				},
+				"float": {
+					"0%, 100%": { transform: "translateY(0)" },
+					"50%": { transform: "translateY(-10px)" },
+				},
+				"glow": {
+					"0%, 100%": { boxShadow: "0 0 5px rgba(0, 242, 254, 0.5)" },
+					"50%": { boxShadow: "0 0 20px rgba(0, 242, 254, 0.8)" }
+				},
+				"pulse-glow": {
+					"0%, 100%": { opacity: "1" },
+					"50%": { opacity: "0.7" }
+				},
+				"gradient-x": {
+					"0%, 100%": {
+						backgroundSize: "200% 200%",
+						backgroundPosition: "left center"
 					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
+					"50%": {
+						backgroundSize: "200% 200%",
+						backgroundPosition: "right center"
 					}
 				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+				"float": "float 6s ease-in-out infinite",
+				"glow": "glow 2s ease-in-out infinite",
+				"pulse-glow": "pulse-glow 2s ease-in-out infinite",
+				"gradient-x": "gradient-x 3s ease infinite",
 			}
 		}
 	},
