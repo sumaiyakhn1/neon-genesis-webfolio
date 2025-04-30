@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Send, MessageSquare, MapPin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,6 +12,7 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [result, setResult] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -21,17 +21,34 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real app, you'd send this data to your backend
-    console.log('Form submitted:', formData);
-    
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
+  const onSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    setResult("Sending....");
+
+    const formDataToSend = new FormData(event.target as HTMLFormElement);
+    formDataToSend.append("access_key", "7d074ffc-6d49-48b5-b72a-fffda24e8527");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formDataToSend
     });
-    
-    // Clear form
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      // Reset the form after submission
+      (event.target as HTMLFormElement).reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+
+    // Clear form state
     setFormData({
       name: '',
       email: '',
@@ -59,18 +76,19 @@ const Contact = () => {
             Send a Message
           </h3>
           
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={onSubmit} className="space-y-6">
             <div className="space-y-2">
               <label htmlFor="name" className="text-sm text-white/70">
                 Your Name
               </label>
               <Input
                 id="name"
+                name="name"
                 value={formData.name}
                 onChange={handleChange}
                 className="bg-white/5 border-white/10 focus:border-neonblue"
                 required
-                placeholder="John Doe"
+                placeholder="Your Name"
               />
             </div>
             
@@ -80,12 +98,13 @@ const Contact = () => {
               </label>
               <Input
                 id="email"
+                name="email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
                 className="bg-white/5 border-white/10 focus:border-neonblue"
                 required
-                placeholder="john@example.com"
+                placeholder="name@gmail.com"
               />
             </div>
             
@@ -95,6 +114,7 @@ const Contact = () => {
               </label>
               <Textarea
                 id="message"
+                name="message"
                 value={formData.message}
                 onChange={handleChange}
                 className="bg-white/5 border-white/10 focus:border-neonblue min-h-[120px]"
@@ -110,6 +130,8 @@ const Contact = () => {
               Send Message <Send size={16} className="ml-2" />
             </Button>
           </form>
+
+          <span>{result}</span>
         </div>
         
         <div className="glass-card p-8 flex flex-col justify-center">
@@ -125,7 +147,7 @@ const Contact = () => {
               <div>
                 <h4 className="text-lg font-medium mb-1">Email</h4>
                 <a href="mailto:contact@example.com" className="text-white/70 hover:text-neonblue transition-colors">
-                  contact@example.com
+                  sumaiyakn28@gmail.com
                 </a>
               </div>
             </div>
@@ -136,8 +158,8 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-medium mb-1">Phone</h4>
-                <a href="tel:+1234567890" className="text-white/70 hover:text-neonpurple transition-colors">
-                  +1 (234) 567-890
+                <a href="tel:+91 7705033040" className="text-white/70 hover:text-neonpurple transition-colors">
+                  +91 7705033040
                 </a>
               </div>
             </div>
@@ -149,7 +171,7 @@ const Contact = () => {
               <div>
                 <h4 className="text-lg font-medium mb-1">Location</h4>
                 <p className="text-white/70">
-                  San Francisco, California
+                  New Delhi, India
                 </p>
               </div>
             </div>

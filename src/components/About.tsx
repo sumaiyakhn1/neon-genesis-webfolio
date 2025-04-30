@@ -12,12 +12,12 @@ const About = () => {
     {
       title: "Backend",
       icon: <Server className="text-neonpurple" size={24} />,
-      skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase"]
+      skills: ["Node.js", "Express", "PostgreSQL"]
     },
     {
       title: "Tools & Others",
       icon: <Terminal className="text-neonpink" size={24} />,
-      skills: ["Git", "Docker", "Jest", "AWS", "CI/CD"]
+      skills: ["Git", "CI/CD"]
     },
     {
       title: "Design",
@@ -39,22 +39,18 @@ const About = () => {
         <div className="order-2 lg:order-1">
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">
-              Hi, I'm <span className="neon-text-purple">John Doe</span>
+              Hi, I'm <span className="neon-text-purple">Sumaiya Khan</span>
             </h3>
             <p className="text-white/80">
-              I'm a passionate full-stack developer with 5+ years of experience 
-              building modern web applications. I specialize in creating clean, 
-              efficient, and user-friendly experiences that solve real-world problems.
+            I'm a passionate full-stack developer with over 6 months of hands-on experience building responsive and user-focused web applications. I enjoy writing clean, efficient code and creating solutions that are both functional and visually appealing.
+
             </p>
             <p className="text-white/80">
-              My journey in web development started with a curiosity about how websites 
-              work. Since then, I've developed a deep expertise in React ecosystem while 
-              maintaining a strong foundation in backend technologies. I'm constantly 
-              learning new tools and techniques to stay at the cutting edge of web development.
+            My journey into web development began with a deep curiosity about how the web works. Since then, I've built a solid foundation in backend technologies and gained practical experience with the React ecosystem. I'm also interested in graphic design, which helps me bring an eye for detail and aesthetics to the user interfaces I build. I'm always learning and exploring new tools and trends to grow as a developer.
+
             </p>
             <p className="text-white/80">
-              When I'm not coding, you can find me hiking, reading sci-fi novels, or 
-              experimenting with new programming languages and frameworks.
+            Outside of coding, I enjoy reading novels—especially sci-fi and thrillers—and occasionally experimenting with design work. Whether it's sketching out UI ideas or diving into a new framework, I'm always looking for creative ways to expand my skills.
             </p>
           </div>
         </div>
@@ -62,7 +58,7 @@ const About = () => {
         <div className="order-1 lg:order-2 flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden glow-border">
             <img 
-              src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=400&auto=format" 
+              src="/sumaiya.png" 
               alt="Developer Profile" 
               className="w-full h-full object-cover"
             />
