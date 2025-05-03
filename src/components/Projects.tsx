@@ -59,6 +59,15 @@ const projects = [
     demoLink: "https://questionnaire-game-alpha.vercel.app/",
     githubLink: "https://github.com/sumaiyakhn1/questionnaire_game",
   },
+  {
+    id: 7,
+    title: "Graphic Designs",
+    description: "Created a website with all the Graphic-Design work that I did.",
+    image: "/graphic-design.jpg",
+    tags: ["Project","React", "Tailwind CSS"],
+    demoLink: "https://graphic-designs.vercel.app/",
+    githubLink: "https://github.com/sumaiyakhn1/graphic-designs",
+  },
 ];
 
 const Projects = () => {
