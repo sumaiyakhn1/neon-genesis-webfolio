@@ -68,6 +68,15 @@ const projects = [
     demoLink: "https://graphic-designs.vercel.app/",
     githubLink: "https://github.com/sumaiyakhn1/graphic-designs",
   },
+  {
+    id: 8,
+    title: "Fake or Safe Game",
+    description: "Created a website where u can play a game and check you AI-created images detection skills.",
+    image: "/fakeorsafe.jpg",
+    tags: ["Project","React", "Tailwind CSS, Firebase"],
+    demoLink: "https://fake-or-safe.web.app/",
+    githubLink: "https://github.com/sumaiyakhn1/graphic-designs",
+  },
 ];
 
 const Projects = () => {
