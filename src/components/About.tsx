@@ -7,17 +7,17 @@ const About = () => {
     {
       title: "Frontend",
       icon: <Code className="text-neonblue" size={24} />,
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
+      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", ]
     },
     {
       title: "Backend",
       icon: <Server className="text-neonpurple" size={24} />,
-      skills: ["Node.js", "Express", "PostgreSQL"]
+      skills: ["Node.js", "Express", "PostgreSQL", "Firebase"]
     },
     {
       title: "Tools & Others",
       icon: <Terminal className="text-neonpink" size={24} />,
-      skills: ["Git", "CI/CD"]
+      skills: ["Git", "CI/CD", "Framer Motion"]
     },
     {
       title: "Design",
