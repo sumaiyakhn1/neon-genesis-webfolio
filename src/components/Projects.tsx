@@ -75,7 +75,7 @@ const projects = [
     image: "/fakeorsafe.jpg",
     tags: ["Project","React", "Tailwind CSS", "Firebase"],
     demoLink: "https://fake-or-safe.web.app/",
-    githubLink: "https://github.com/sumaiyakhn1/graphic-designs",
+    githubLink: "https://github.com/sumaiyakhn1/Catch-the-fake",
   },
 ];
 
