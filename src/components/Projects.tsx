@@ -77,6 +77,15 @@ const projects = [
     demoLink: "https://fake-or-safe.web.app/",
     githubLink: "https://github.com/sumaiyakhn1/Catch-the-fake",
   },
+  {
+    id: 9,
+    title: "TheCyberVision",
+    description: "Created a website for education purpose.",
+    image: "/cybervision.jpg",
+    tags: ["Project","Next JS", "Tailwind CSS"],
+    demoLink: "https://www.thecybervision.com/",
+    githubLink: "",
+  },
 ];
 
 const Projects = () => {
