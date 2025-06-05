@@ -42,7 +42,7 @@ const About = () => {
               Hi, I'm <span className="neon-text-purple">Sumaiya Khan</span>
             </h3>
             <p className="text-white/80">
-            I'm a passionate full-stack developer with over 6 months of hands-on experience building responsive and user-focused web applications. I enjoy writing clean, efficient code and creating solutions that are both functional and visually appealing.
+            I'm a passionate full-stack developer with hands-on experience building responsive and user-focused web applications. I enjoy writing clean, efficient code and creating solutions that are both functional and visually appealing.
 
             </p>
             <p className="text-white/80">
