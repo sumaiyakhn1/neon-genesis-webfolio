@@ -46,7 +46,7 @@ const projects = [
     title: "NoteShala",
     description: "Crafting an innovative digital library that empowers teachers to upload valuable study materials, while giving students instant access to download and enrich their academic journey.",
     image: "/noteshala.jpg",
-    tags: ["Project-ongoing","TailwindCSS", "Node.js", "PostgreSQL"],
+    tags: ["Project-ongoing","TailwindCSS", "Node.js", "PostgreSQL", "Next JS"],
     demoLink: "https://noteshala.vercel.app/",
     githubLink: "https://github.com/rajputsundram/noteshala",
   },
