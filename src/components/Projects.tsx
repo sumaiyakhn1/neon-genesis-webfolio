@@ -86,6 +86,15 @@ const projects = [
     demoLink: "https://www.thecybervision.com/",
     githubLink: "",
   },
+  {
+    id: 10,
+    title: "Prayer Time App",
+    description: "Created a website that take your time and location and shows you prayer time.",
+    image: "/PrayerTime.jpg",
+    tags: ["Project","React", "Tailwind CSS", "Firebase"],
+    demoLink: "https://madras-app.vercel.app/",
+    githubLink: "https://github.com/sumaiyakhn1/madras-app",
+  },
 ];
 
 const Projects = () => {
